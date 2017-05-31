@@ -226,7 +226,7 @@ Open a terminal window to be able
 3. Checkout the Chromium repo: `~/chromium$ fetch --nohooks android`. **NOTE**: This process may take a long time (an hour?)
 4. Verify that the `.gclient` file has `target_os = ['android']` in it: `~/chromium$ cat .gclient`
 5. `~/chromium$ cd src` and then `~/chromium/src$ gclient sync`. **NOTE**: This process may take some time too.
-6. Checkout a specific tag to a new branch. The tag used for this build is `57.0.2987.5`. The name of the branch to checkout could be `webar_57.0.2987.5` for example: `~/chromium/src$ git checkout -b webar_57.0.2987.5 57.0.2987.5`. Choose the name of the brnach you like but remember it to create a corresponding out folder later on.
+6. Checkout a specific tag to a new branch. The tag used for this build is `57.0.2987.5`. The name of the branch to checkout could be `webar_57.0.2987.5` for example: `~/chromium/src$ git checkout -b webar_57.0.2987.5 57.0.2987.5`. Choose the name of the branch you like but remember it to create a corresponding out folder later on.
 7. Create a folder for the final product compilation with the same name as the branch: `~/chromium/src$ mkdir -p out/webar_57.0.2987.5`
 8. Create and edit a new file `out/webar_57.0.2987.5/args.gn` with the command `~/chromium/src$ gedit out/webar_57.0.2987.5/args.gn` and copy and paste the following content in it:
   ```
