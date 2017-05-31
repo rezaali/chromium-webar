@@ -260,11 +260,11 @@ I know, many steps to be followed, but once you have completed all of them (reme
 
 **IMPORTANT:** some changes have been done to the Chromium command buffer. These changes may require to rebuild the command buffer. The Python script to do so does not execute along with the regular building process so the script needs to be executed with the following command at least once (and everytime a new command is created in the command buffer):
 ```
-~/chromium/src/python gpu/command_buffer/build_gles2_cmd_buffer.py
+~/chromium/src$ python gpu/command_buffer/build_gles2_cmd_buffer.py
 ```
 This tutorial specified that the name of the out folder created during the setup process above is the same as the branch (`webar_57.0.2987.5`). This is no coincidence, as the `build_install_run.sh` shell script provided along with this documentation allows to build the Chromium project depending on the current checked out git branch. This script not only compiles Chromium but also the Tango native library called `tango_chromium` that handle the Tango SDK calls. Moreover, this script also installs the final APK on to a connected device and runs it, so it is convenient that you to connect the Tango device via USB before executing it. The project that will be built by default is the Chromium WebView project, the only one that has been modified to provide Tango/WebAR capabilities.
 ```
-~/chromium/src/build_install_run.sh
+~/chromium/src$ build_install_run.sh
 ```
 You can review the content of the script to see what it does (it is a fairly simple script) but if you would like to compile the final APK on your own you could do it by executing the following command:
 ```
